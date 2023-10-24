@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: pycalc
+Version: 0.0.0
+Summary: An MVC calculator made in Qt.
+Author: Tim Jones
+Project-URL: Source, https://github.com/TheDeanLab/CI2023
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Scientific/Engineering :: Education
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Matplotlib
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: PyQt5
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: numpydoc; extra == "docs"
+Requires-Dist: nbconvert; extra == "docs"
+Requires-Dist: ipykernel; extra == "docs"
+Requires-Dist: sphinx<6.0.0; extra == "docs"
+Requires-Dist: sphinx-copybutton; extra == "docs"
+Requires-Dist: sphinx-issues; extra == "docs"
+Requires-Dist: sphinx-design; extra == "docs"
+Requires-Dist: pyyaml; extra == "docs"
+Requires-Dist: pydata_sphinx_theme==0.10.0rc2; extra == "docs"
+
+# 231024_Calc
+Calculator Repository for Python Programming Nanocourse -- Otto group
