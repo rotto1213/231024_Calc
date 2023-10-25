@@ -2,7 +2,7 @@
 
 from functools import partial
 
-from pycalc.constants import *
+from pycalc.constants import ERROR_MSG
 
 
 # Main calculator controller class
