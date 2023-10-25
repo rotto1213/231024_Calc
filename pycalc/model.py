@@ -2,6 +2,7 @@
 
 from pycalc.constants import *
 
+
 # Simple "model" to handle calculator functionality
 # This function just uses the Python "eval()" function
 # to evaluate the expression entered.
@@ -22,5 +23,5 @@ def evaluateExpression(expression):
         result = str(eval(expression, {}, {}))
     except:
         result = ERROR_MSG
-        
+
     return result
