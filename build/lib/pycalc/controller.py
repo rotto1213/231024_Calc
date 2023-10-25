@@ -6,7 +6,7 @@ from pycalc.constants import *
 
 # Main calculator controller class
 # Connects the view (GUI) with the model (business logic)
-class PyCalcCtrl():
+class PyCalcCtrl:
     """
     Main calculator controller class.
 
@@ -29,7 +29,7 @@ class PyCalcCtrl():
 
         _connectSignals(self):
             Registers associations between button clicks ("signals") and their corresponding actions ("slots").
-        """
+    """
 
     def __init__(self, model, view):
         """
@@ -45,7 +45,7 @@ class PyCalcCtrl():
         self._evaluate = model
         self._view = view
         self._connectSignals()  # Register signals/slots
-    
+
     def _calculateResult(self):
         """
         Evaluate the expression in the calculator display and update the view with the result.
@@ -57,9 +57,9 @@ class PyCalcCtrl():
             None
         """
 
-        result = self._evaluate(expression=self._view.displayText()+"1")
+        result = self._evaluate(expression=self._view.displayText() + "1")
         self._view.setDisplayText(result)
-        
+
     def _buildExpression(self, sub_exp):
         """
         Build an expression for calculation based on user input and update the view accordingly.
@@ -72,10 +72,10 @@ class PyCalcCtrl():
         """
         if self._view.displayText() == ERROR_MSG:
             self._view.clearDisplay()
-            
+
         expression = self._view.displayText() + sub_exp
         self._view.setDisplayText(expression)
-        
+
     def _connectSignals(self):
         """
         Register associations between button clicks ("signals") and their corresponding actions ("slots").
@@ -89,7 +89,7 @@ class PyCalcCtrl():
         for btnText, btn in self._view.buttons.items():
             if btnText not in {"=", "C"}:
                 btn.clicked.connect(partial(self._buildExpression, btnText))
-        
+
         self._view.buttons["="].clicked.connect(self._calculateResult)
         # self._view.display.returnPressed.connect(self._calculateResult)
         self._view.buttons["C"].clicked.connect(self._view.clearDisplay)

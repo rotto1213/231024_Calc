@@ -18,6 +18,7 @@ from PyQt5.QtWidgets import QApplication
 __version__ = "0.1"
 __author__ = "Tim Jones"
 
+
 def main():
     """
     Main application entry point.
@@ -32,11 +33,12 @@ def main():
         None
     """
     calc = QApplication(sys.argv)
-    view = PyCalcUi()   # Render calculator GUI
-    view.show()         # Display calculator GUI
-    model = evaluateExpression          # Create instance of model
+    view = PyCalcUi()  # Render calculator GUI
+    view.show()  # Display calculator GUI
+    model = evaluateExpression  # Create instance of model
     PyCalcCtrl(model=model, view=view)  # Create instance of controller
-    sys.exit(calc.exec_())    # Execute application main loop
-    
+    sys.exit(calc.exec_())  # Execute application main loop
+
+
 if __name__ == "__main__":
     main()

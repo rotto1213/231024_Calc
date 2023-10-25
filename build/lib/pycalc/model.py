@@ -22,5 +22,5 @@ def evaluateExpression(expression):
         result = str(eval(expression, {}, {}))
     except:
         result = ERROR_MSG
-        
+
     return result
