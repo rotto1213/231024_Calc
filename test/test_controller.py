@@ -1,7 +1,7 @@
 import pytest
 
 
-@pytest.mark.parameterize("a,b,c", [(1, 2, 3), (3, 6, 9)])
+@pytest.mark.parametrize("a,b,c", [(1, 2, 3), (3, 6, 9)])
 def test_returnSignal(controller):
     """Tests the Return key binding interface to our Qt display widget."""
     from PyQt5 import QtCore, QtGui
